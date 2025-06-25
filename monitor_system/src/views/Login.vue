@@ -35,6 +35,11 @@ export default {
     methods: {
       Login() {
         console.log('submit!',this.loginForm);
+        this.$message({
+          message: '成功登录，欢迎来到后台管理系统',
+          type: 'success'
+        });
+        this.$router.push({path:'/Home'})
       },
       toRegister(){
         this.$router.push({path:'/Register'})
